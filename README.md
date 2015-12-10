@@ -18,3 +18,6 @@ After making edits to the source file, you may build a new tmLanguage file by fo
 
 ## Contribute
 Please make improvements and better support for highlighting by submitting issues and especially pull requests.
+
+## Screenshot
+![screenshot](./screenshot.png)

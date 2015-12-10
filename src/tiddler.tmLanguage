@@ -172,7 +172,40 @@
 					<key>include</key>
 					<string>#tagStuff</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#MacroInline</string>
+				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(&lt;&lt;)([-_a-zA-Z0-9:]+)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.begin.xml</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>TW5 Macro call</string>
+			<key>end</key>
+			<string>(&gt;&gt;)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.end.xml</string>
+				</dict>
+			</dict>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -222,6 +255,60 @@
 					<string>#singlequotedString</string>
 				</dict>
 			</array>
+		</dict>
+		<key>MacroInline</key>
+		<dict>
+			<key>begin</key>
+			<string>(&lt;&lt;)([-_a-zA-Z0-9:]+)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.begin.xml</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>TW5 Macro call</string>
+			<key>end</key>
+			<string>(&gt;&gt;)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.tag.end.xml</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#doublequotedString</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#singlequotedString</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#MacroParam</string>
+				</dict>
+			</array>
+		</dict>
+		<key>MacroParam</key>
+		<dict>
+			<key>comment</key>
+			<string>TW5 Macro Parameters</string>
+			<key>match</key>
+			<string>\b([-_a-zA-Z0-9]+):</string>
+			<key>name</key>
+			<string>variable.parameter</string>
 		</dict>
 		<key>bare-ampersand</key>
 		<dict>

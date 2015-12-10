@@ -53,7 +53,33 @@ patterns:
   name: meta.tag.xml
   patterns:
   - {include: '#tagStuff'}
+  - {include: '#MacroInline'}
+- comment: TW5 Macro call
+  begin: (<<)([-_a-zA-Z0-9:]+)
+  captures:
+    '1': {name: punctuation.definition.tag.begin.xml}
+    '2': {name: support.function}
+  end: (>>)
+  endCaptures:
+    '1': {name: punctuation.definition.tag.end.xml}
 repository:
+  MacroParam:
+    comment: TW5 Macro Parameters
+    match: '\b([-_a-zA-Z0-9]+):'
+    name: variable.parameter
+  MacroInline:
+    comment: TW5 Macro call
+    begin: (<<)([-_a-zA-Z0-9:]+)
+    captures:
+      '1': {name: punctuation.definition.tag.begin.xml}
+      '2': {name: support.function}
+    end: (>>)
+    endCaptures:
+      '1': {name: punctuation.definition.tag.end.xml}
+    patterns:
+    - {include: '#doublequotedString'}
+    - {include: '#singlequotedString'}
+    - {include: '#MacroParam'}
   EntityDecl:
     begin: (<!)(ENTITY)\s+(%\s+)?([:a-zA-Z_][:a-zA-Z0-9_.-]*)(\s+(?:SYSTEM|PUBLIC)\s+)?
     captures:

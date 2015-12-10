@@ -11,10 +11,13 @@ patterns:
   name: constant.language.tid
   match: '^\w+\:'
 - comment: Macro definitions.
-  match: '(\\define)\s(.+)\s*\('
+  begin: '(\\define)\s(.+)\s*\('
   captures:
     '1': {name: constant.language.tid}
     '2': {name: support.function}
+  end: \)
+  patterns:
+  - {include: '#MacroParam'}
 - comment: Macro end
   match: '^\\end'
   name: constant.language.tid

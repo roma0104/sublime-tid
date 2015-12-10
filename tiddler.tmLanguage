@@ -19,6 +19,8 @@
 			<string>constant.language.tid</string>
 		</dict>
 		<dict>
+			<key>begin</key>
+			<string>(\\define)\s(.+)\s*\(</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -34,8 +36,15 @@
 			</dict>
 			<key>comment</key>
 			<string>Macro definitions.</string>
-			<key>match</key>
-			<string>(\\define)\s(.+)\s*\(</string>
+			<key>end</key>
+			<string>\)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#MacroParam</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>comment</key>

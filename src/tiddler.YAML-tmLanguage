@@ -9,7 +9,7 @@ uuid: fdab77cb-d4fe-4df4-9db4-2e78e09c092c
 patterns:
 - comment: Tiddler field names.
   name: constant.language.tid
-  match: '^\w+\:'
+  match: '^[$-_a-zA-Z]+\:'
 - comment: Macro definitions.
   begin: '(\\define)\s(.+)\s*\('
   captures:

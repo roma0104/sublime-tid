@@ -14,7 +14,7 @@
 			<key>comment</key>
 			<string>Tiddler field names.</string>
 			<key>match</key>
-			<string>^\w+\:</string>
+			<string>^[$-_a-zA-Z]+\:</string>
 			<key>name</key>
 			<string>constant.language.tid</string>
 		</dict>

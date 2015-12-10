@@ -44,6 +44,14 @@
 					<key>include</key>
 					<string>#MacroParam</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#doublequotedString</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#singlequotedString</string>
+				</dict>
 			</array>
 		</dict>
 		<dict>

@@ -18,6 +18,8 @@ patterns:
   end: \)
   patterns:
   - {include: '#MacroParam'}
+  - {include: '#doublequotedString'}
+  - {include: '#singlequotedString'}
 - comment: Macro end
   match: '^\\end'
   name: constant.language.tid

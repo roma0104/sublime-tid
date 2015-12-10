@@ -65,6 +65,10 @@ patterns:
   end: (>>)
   endCaptures:
     '1': {name: punctuation.definition.tag.end.xml}
+  patterns:
+  - {include: '#MacroParam'}
+  - {include: '#doublequotedString'}
+  - {include: '#singlequotedString'}
 repository:
   MacroParam:
     comment: TW5 Macro Parameters

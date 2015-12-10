@@ -215,6 +215,21 @@
 					<string>punctuation.definition.tag.end.xml</string>
 				</dict>
 			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#MacroParam</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#doublequotedString</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#singlequotedString</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>repository</key>
